@@ -1,0 +1,480 @@
+{
+  "name": "RestaurAcción Digital — diagnostic questionnaire (AI input)",
+  "version": "2025",
+  "description": "Data dictionary of the land-use questionnaire answered in the mobile app. Answers are serialized as text and sent to the language model to personalize the restoration plan. Source: education/A-diagnostic-questionnaire.md (Appendix A of the thesis).",
+  "privacy": "Fields marked pii=true identify a person or a private plot; they are never published, and the name is used only to greet the landholder in the generated plan.",
+  "sections": [
+    {
+      "id": "plot_profile",
+      "label_en": "Landholder and plot profile",
+      "label_es": "Información general del habitante y su parcela",
+      "questions": [
+        {
+          "id": "1.1",
+          "label_en": "Full name",
+          "label_es": "Nombre completo",
+          "type": "text",
+          "pii": true
+        },
+        {
+          "id": "1.2",
+          "label_en": "Plot coordinates",
+          "label_es": "Coordenadas de la parcela",
+          "type": "text",
+          "pii": true
+        },
+        {
+          "id": "1.3",
+          "label_en": "Plot location (vereda)",
+          "label_es": "Ubicación de la parcela (vereda, coordenadas si es posible)",
+          "type": "text",
+          "pii": true
+        },
+        {
+          "id": "1.4",
+          "label_en": "Approximate plot altitude (m a.s.l.)",
+          "label_es": "Altitud aproximada de su parcela (m s. n. m.)",
+          "type": "single_select",
+          "options_es": [
+            "Menos de 2.800 m",
+            "2.800 - 3.200 m",
+            "3.200 - 3.600 m",
+            "Más de 3.600 m"
+          ]
+        },
+        {
+          "id": "1.5",
+          "label_en": "Approximate area to restore",
+          "label_es": "Tamaño aproximado de la parcela a restaurar",
+          "type": "single_select",
+          "options_es": [
+            "Menos de 1 ha",
+            "1 - 5 ha",
+            "Más de 5 ha"
+          ]
+        },
+        {
+          "id": "1.6",
+          "label_en": "Current activities on the land",
+          "label_es": "Actividades actuales en el terreno",
+          "type": "multi_select",
+          "options_es": [
+            "Cultivo de alimentos",
+            "Cría de ganado",
+            "Tala de árboles para leña",
+            "Pastoreo",
+            "Otras"
+          ],
+          "allows_free_text": true
+        },
+        {
+          "id": "1.7",
+          "label_en": "Water sources on the plot",
+          "label_es": "Fuentes de agua en la parcela",
+          "type": "single_select",
+          "options_es": [
+            "Quebradas o ríos",
+            "Nacimientos de agua",
+            "No hay fuentes cercanas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "soil_vegetation",
+      "label_en": "Soil and vegetation condition",
+      "label_es": "Estado actual del suelo y vegetación",
+      "questions": [
+        {
+          "id": "2.1",
+          "label_en": "Soil condition",
+          "label_es": "Estado del suelo",
+          "type": "single_select",
+          "options_es": [
+            "Erosionado o degradado",
+            "Compacto (duro, difícil de trabajar)",
+            "Fértil y húmedo",
+            "Otro"
+          ],
+          "allows_free_text": true
+        },
+        {
+          "id": "2.2",
+          "label_en": "Predominant vegetation",
+          "label_es": "Vegetación predominante",
+          "type": "single_select",
+          "options_es": [
+            "Bosque nativo",
+            "Arbustos dispersos",
+            "Pastos y cultivos",
+            "Sin vegetación"
+          ]
+        },
+        {
+          "id": "2.3",
+          "label_en": "Has available water decreased?",
+          "label_es": "¿Ha notado disminución en la cantidad de agua disponible?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No"
+          ]
+        },
+        {
+          "id": "2.4",
+          "label_en": "Problems observed on the plot",
+          "label_es": "Problemas observados en la parcela",
+          "type": "multi_select",
+          "options_es": [
+            "Erosión del suelo",
+            "Pérdida de fuentes de agua",
+            "Disminución de vegetación nativa",
+            "Otro"
+          ],
+          "allows_free_text": true
+        },
+        {
+          "id": "2.5",
+          "label_en": "Natural vegetation cover",
+          "label_es": "Cobertura vegetal natural en el terreno",
+          "type": "single_select",
+          "options_es": [
+            "Menos del 20%",
+            "20% - 50%",
+            "Más del 50%"
+          ]
+        },
+        {
+          "id": "2.6",
+          "label_en": "Has soil erosion been observed?",
+          "label_es": "¿Ha notado erosión del suelo?",
+          "type": "single_select",
+          "options_es": [
+            "Sí, mucha",
+            "Sí, poca",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "water",
+      "label_en": "Water conditions and management",
+      "label_es": "Condiciones del agua y manejo hídrico",
+      "questions": [
+        {
+          "id": "3.1",
+          "label_en": "Main water source",
+          "label_es": "Fuente principal de agua",
+          "type": "single_select",
+          "options_es": [
+            "Quebradas",
+            "Nacimientos",
+            "Agua lluvia",
+            "Pozo",
+            "Acueducto comunitario",
+            "Otro"
+          ],
+          "allows_free_text": true
+        },
+        {
+          "id": "3.2",
+          "label_en": "Changes in water availability",
+          "label_es": "¿Ha notado cambios en la disponibilidad de agua?",
+          "type": "single_select",
+          "options_es": [
+            "Sí, ha disminuido",
+            "No ha cambiado",
+            "No estoy seguro"
+          ]
+        },
+        {
+          "id": "3.3",
+          "label_en": "Uses infiltration ditches or another water-conservation method",
+          "label_es": "¿Usa zanjas de infiltración u otro método de conservación de agua?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No, pero me interesa",
+            "No lo necesito"
+          ]
+        },
+        {
+          "id": "3.4",
+          "label_en": "Activities that may affect water quality",
+          "label_es": "Actividades que pueden afectar la calidad del agua",
+          "type": "single_select",
+          "options_es": [
+            "Uso de fertilizantes químicos",
+            "Lavado de agroquímicos cerca del agua",
+            "Drenado de humedales",
+            "Ninguna"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "farming_practices",
+      "label_en": "Farming practices and ecosystem management",
+      "label_es": "Prácticas agrícolas y manejo del ecosistema",
+      "questions": [
+        {
+          "id": "4.1",
+          "label_en": "Crop residue management",
+          "label_es": "Manejo de residuos agrícolas",
+          "type": "single_select",
+          "options_es": [
+            "Quema",
+            "Cobertura del suelo",
+            "Uso como abono"
+          ]
+        },
+        {
+          "id": "4.2",
+          "label_en": "Planted native trees in the last 5 years",
+          "label_es": "¿Ha sembrado árboles nativos en los últimos 5 años?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No"
+          ],
+          "allows_free_text": true
+        },
+        {
+          "id": "4.3",
+          "label_en": "Interest in planting native species",
+          "label_es": "¿Está interesado en sembrar especies nativas?",
+          "type": "single_select",
+          "options_es": [
+            "Sí, pero no tengo acceso a semillas/plántulas",
+            "Sí, pero no sé cómo hacerlo",
+            "No"
+          ]
+        },
+        {
+          "id": "4.4",
+          "label_en": "On-farm water management",
+          "label_es": "¿Cómo maneja el agua en su terreno?",
+          "type": "single_select",
+          "options_es": [
+            "Zanjas de infiltración",
+            "Drenaje de exceso de agua",
+            "No realiza ninguna técnica especial"
+          ]
+        },
+        {
+          "id": "4.5",
+          "label_en": "Livestock access to the land",
+          "label_es": "Ingreso de ganado en el terreno",
+          "type": "single_select",
+          "options_es": [
+            "Sí, libremente",
+            "Sí, con rotación de áreas",
+            "No"
+          ]
+        },
+        {
+          "id": "4.6",
+          "label_en": "Current crops",
+          "label_es": "Cultivos actuales en el terreno",
+          "type": "single_select",
+          "options_es": [
+            "Papa",
+            "Cebolla",
+            "Frutas",
+            "Pastos",
+            "Ninguno",
+            "Otro"
+          ],
+          "allows_free_text": true
+        },
+        {
+          "id": "4.7",
+          "label_en": "Fertilizer use",
+          "label_es": "Uso de abonos",
+          "type": "single_select",
+          "options_es": [
+            "Orgánicos o compost",
+            "Solo fertilizantes químicos",
+            "No uso abonos"
+          ]
+        },
+        {
+          "id": "4.8",
+          "label_en": "Synthetic pesticide/herbicide use",
+          "label_es": "Uso de plaguicidas/herbicidas sintéticos",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No",
+            "No estoy seguro"
+          ]
+        },
+        {
+          "id": "4.9",
+          "label_en": "Livestock on the land",
+          "label_es": "Ganado en el terreno",
+          "type": "single_select",
+          "options_es": [
+            "Vacas",
+            "Ovejas",
+            "Caballos",
+            "No tengo ganado"
+          ]
+        },
+        {
+          "id": "4.10",
+          "label_en": "Organic waste management",
+          "label_es": "Manejo de residuos orgánicos",
+          "type": "single_select",
+          "options_es": [
+            "Compostaje",
+            "Quema",
+            "Enterramiento",
+            "No hago manejo especial"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "restoration_readiness",
+      "label_en": "Restoration and reforestation readiness",
+      "label_es": "Restauración y reforestación",
+      "questions": [
+        {
+          "id": "5.1",
+          "label_en": "Practices the landholder is willing to implement",
+          "label_es": "Prácticas que estaría dispuesto a implementar",
+          "type": "multi_select",
+          "options_es": [
+            "Cercar fuentes hídricas",
+            "Sembrar árboles nativos",
+            "Construir zanjas de infiltración",
+            "Cubrir el suelo con materia orgánica",
+            "Reducir el sobrepastoreo",
+            "Evitar la quema de residuos agrícolas",
+            "Otro"
+          ],
+          "allows_free_text": true
+        },
+        {
+          "id": "5.2",
+          "label_en": "Main barriers to restoration",
+          "label_es": "Principales barreras para restaurar su terreno",
+          "type": "single_select",
+          "options_es": [
+            "Falta de conocimiento",
+            "Falta de recursos (semillas, herramientas, mano de obra)",
+            "Falta de tiempo",
+            "No considero que sea necesario"
+          ]
+        },
+        {
+          "id": "5.3",
+          "label_en": "Wants personalized recommendations on the phone",
+          "label_es": "¿Le gustaría recibir recomendaciones personalizadas en su celular?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No"
+          ]
+        },
+        {
+          "id": "5.4",
+          "label_en": "Wants restoration training",
+          "label_es": "¿Le gustaría capacitación en restauración ecológica?",
+          "type": "single_select",
+          "options_es": [
+            "Sí, presencial en la comunidad",
+            "Sí, por videos/mensajes",
+            "No"
+          ]
+        },
+        {
+          "id": "5.5",
+          "label_en": "Needs support to obtain seeds or tools",
+          "label_es": "¿Necesita apoyo para conseguir semillas o herramientas?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No"
+          ]
+        },
+        {
+          "id": "5.6",
+          "label_en": "Interested in planting native trees",
+          "label_es": "¿Está interesado en sembrar árboles nativos?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No",
+            "No estoy seguro"
+          ]
+        },
+        {
+          "id": "5.7",
+          "label_en": "Options the landholder would like to implement",
+          "label_es": "Opciones que le gustaría implementar",
+          "type": "single_select",
+          "options_es": [
+            "Cercas vivas",
+            "Reforestación en áreas degradadas",
+            "Protección de nacimientos de agua",
+            "Manejo del suelo",
+            "No estoy seguro"
+          ]
+        },
+        {
+          "id": "5.8",
+          "label_en": "Willingness to maintain planted trees",
+          "label_es": "Disposición para el mantenimiento de árboles sembrados",
+          "type": "single_select",
+          "options_es": [
+            "Alta",
+            "Media",
+            "Baja"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "technology_access",
+      "label_en": "Technology and communication access",
+      "label_es": "Uso de tecnología y comunicación",
+      "questions": [
+        {
+          "id": "6.1",
+          "label_en": "Access to a mobile phone with internet",
+          "label_es": "¿Tiene acceso a un teléfono móvil con internet?",
+          "type": "single_select",
+          "options_es": [
+            "Sí, con datos móviles",
+            "Sí, sin datos móviles",
+            "No"
+          ]
+        },
+        {
+          "id": "6.2",
+          "label_en": "Wants restoration recommendations via WhatsApp",
+          "label_es": "¿Le gustaría recibir recomendaciones de restauración por WhatsApp?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No"
+          ]
+        },
+        {
+          "id": "6.3",
+          "label_en": "Interested in information on support programs",
+          "label_es": "¿Le interesa información sobre programas de apoyo?",
+          "type": "single_select",
+          "options_es": [
+            "Sí",
+            "No",
+            "No estoy seguro"
+          ]
+        }
+      ]
+    }
+  ]
+}

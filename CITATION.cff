@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "RestaurAcción Digital: low-cost field sensing, geospatial targeting and expert-grounded AI for teaching ecological restoration in the Rabanal Páramo"
+type: dataset
+authors:
+  - family-names: "Triana Barrantes"
+    given-names: "María Fernanda"
+    affiliation: "Universidad de Cundinamarca"
+date-released: 2026-11-21
+license: CC-BY-4.0
+keywords:
+  - ecological restoration
+  - páramo
+  - weather station
+  - micro:bit
+  - Google Earth Engine
+  - GPT-4
+  - Flutter
+  - experiential learning
+  - technology transfer
+preferred-citation:
+  type: thesis
+  thesis-type: "Master's thesis"
+  title: "Secuencia didáctica con monitoreo climático y tecnología móvil para la enseñanza de prácticas de restauración ecológica en el Páramo de Rabanal"
+  authors:
+    - family-names: "Triana Barrantes"
+      given-names: "María Fernanda"
+  institution:
+    name: "Universidad de Cundinamarca"
+    city: "Chía"
+    country: "CO"
+  year: 2025
