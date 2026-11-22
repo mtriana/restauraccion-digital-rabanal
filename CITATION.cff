@@ -6,7 +6,10 @@ authors:
   - family-names: "Triana Barrantes"
     given-names: "María Fernanda"
     affiliation: "Universidad de Cundinamarca"
-date-released: 2026-11-21
+date-released: 2026-11-22
+version: 1.0.0
+doi: 10.5281/zenodo.24450529
+repository-code: "https://github.com/mtriana/restauraccion-digital-rabanal"
 license: CC-BY-4.0
 keywords:
   - ecological restoration

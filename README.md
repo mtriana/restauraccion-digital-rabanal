@@ -1,5 +1,7 @@
 # RestaurAcción Digital
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24450529.svg)](https://doi.org/10.5281/zenodo.24450529)
+
 **Low-cost field sensing, geospatial targeting and expert-grounded AI to transfer ecological restoration practices to rural landholders in the Rabanal Páramo, Colombia**
 
 Technical companion to the master's thesis:
@@ -97,7 +99,11 @@ The pattern is reusable wherever expert knowledge must reach many dispersed, non
 
 **María Fernanda Triana Barrantes**, Systems Engineer; M.Ed., Universidad de Cundinamarca. Thesis advisor: Carlos Humberto Olivella Zuleta.
 
-If you use this work, please cite it (see [`CITATION.cff`](CITATION.cff)).
+If you use this work, please cite it:
+
+> Triana Barrantes, M. F. (2026). *RestaurAcción Digital: low-cost field sensing, geospatial targeting and expert-grounded AI for teaching ecological restoration in the Rabanal Páramo* (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.24450529
+
+See also [`CITATION.cff`](CITATION.cff).
 
 ## License
 
